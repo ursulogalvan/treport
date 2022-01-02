@@ -4,7 +4,7 @@
 (require 'org)
 (require 'cl)
 
-(setq treport/org-main-file (concat "~/OrgMode/reports/daily-log-" (format-time-string "%Y-%m-%d") ".org"))
+(setq treport/org-main-file (concat "~/REPOSITORIO/personal/data/daily-log-" (format-time-string "%Y-%m-%d") ".org"))
 
 (defun treport/move-line-up ()
   "Move up the current line."
@@ -55,7 +55,7 @@
   (interactive)
   (unless (file-exists-p treport/org-main-file)
     (let ((content (with-temp-buffer
-		    (insert-file-contents "~/OrgMode/DailyLogEthalon.org")
+		    (insert-file-contents "~/REPOSITORIO/personal/track.org")
 		    (buffer-string))))
       (write-region content nil treport/org-main-file))))
 
